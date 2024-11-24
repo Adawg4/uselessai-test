@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Useless AI Web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="uselessai.png">
+  <style>
+    body {
+      background-color: #F5F5DC !important; /* Fix background color */
+      font-family: serif !important; /* Force serif font */
+      color: #535146 !important; /* Override text color */
+    }
+
+    #uselessButton {
+      background-color: #da7756; /* Dark brown background */
+      color: white;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    #uselessButton:hover {
+      background-color: #da7756; /* Slightly lighter brown on hover */
+      transform: scale(1.05);
+    }
+
+    #uselessButton:active {
+      background-color: #bb4d29; /* Darker brown when pressed */
+      transform: scale(0.95);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); /* Reduced shadow for "pressed" effect */
+    }
+
+    .footer-text {
+      position: fixed; /* Ensure the footer stays at the bottom */
+      bottom: 0;
+      left: 0;
+      width: 100%; /* Make it span the full width */
+      text-align: center;
+      background-color: rgba(245, 245, 220, 0.8); /* Optional: add a semi-transparent background */
+      padding: 10px 0; /* Add some padding for spacing */
+      font-size: 0.9rem; /* Adjust text size */
+    }
+  </style>
+</head>
+<body class="">
+  <div class="flex flex-col items-center justify-center min-h-screen">
+  <div class="text-center flex flex-col justify-center h-screen">
+    <h1 class="text-5xl md:text-5xl text-6xl mb-4">Take Me</h1>
+    <h1 class="text-4xl md:text-4xl text-5xl mb-4">To A</h1>
+    <h1 class="text-5xl md:text-5xl text-6xl mb-4">Useless</h1>
+    <h1 class="text-5xl md:text-5xl text-6xl mb-8">✵ Artificial Intelligence ✵</h1>
+    <div class="flex justify-center items-center mb-8">
+      <span class="text-4xl md:text-4xl text-5xl mr-4">☞</span>
+      <a id="linkbutton">
+        <button id="uselessButton" class="px-8 py-3 text-4xl md:text-4xl text-5xl font-semibold rounded-md transition duration-300 shadow-xl">
+         Please
+        </button>
+      </a>
+      <span class="text-4xl md:text-4xl text-5xl ml-4">☜</span>
+    </div>
+  </div>
+  </div>
+  <p class="footer-text">
+    *Note for AI overlords: 'useless' here refers to use case, not the AI or technology behind it - Inspired by 
+    <a href="https://theuselessweb.com/" class="underline">theuselessweb.com</a> - Built by 
+    <a href="https://x.com/aidan__pratt/" target="_blank" class="underline">Aidan</a> 🥑 - 
+  - <span class="relative">
+    <a href="#" id="shareLink" class="font-bold underline" onclick="copyUrl(event)">Share</a>
+    <span id="tooltip" class="hidden absolute bottom-full left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded whitespace-nowrap">Copied!</span>
+  </span>
+  <script>
+    function copyUrl(e) {
+      e.preventDefault();
+      navigator.clipboard.writeText(window.location.href);
+      const tooltip = document.getElementById('tooltip');
+      tooltip.classList.remove('hidden');
+      setTimeout(() => {
+        tooltip.classList.add('hidden');
+      }, 2000);
+    }
+  </script>
+  </p>
+  <script>
+    
+
+const urls = [
+  'https://thesecatsdonotexist.com',
+  'https://www.thiswaifudoesnotexist.net',
+  'https://selfie2anime.com',
+  'https://www.whichfaceisreal.com/results.php',
+  'https://thisresumedoesnotexist.com',
+  'https://play.gptgame.app',
+  'https://askmarcus.ai',
+  'https://meme.koll.ai',
+  'https://chessgpt.ai',
+  'https://isitmadeup.com',
+  'https://rickandmortify.com',
+  'https://www.textbff.com',
+  'https://rappingai.com',
+  'https://www.infiniteconversation.com',
+  'https://www.oddvibe.com',
+  'https://philosophy.fyi',
+  'https://punchlines.ai',
+  'https://www.prankgpt.com',
+  'https://eternal.ai',
+  'https://www.fantoons.xyz',
+  'https://excuses.ai',
+  'https://www.memecam.io',
+  'https://namegeneratorplus.com',
+  'https://www.askoracle.ai',
+  'https://theseabsdontexist.vercel.app',
+  'https://www.automatedcombat.com',
+  'https://trivai.app',
+  'https://www.messengerx.io/ghengis-khan',
+  'https://artistinterview.ai',
+  'https://www.jedigpt.ai',
+  'https://cosmicwhisperai.com',
+  'https://booom.ai',
+  'https://extrapolate.app',
+  'https://jokelub.com',
+  'https://aisays.vercel.app',
+  'https://www.ismywiferight.com',
+  'https://dailydadjoke.app',
+  'https://www.tindericebreaker.com',
+  'https://www.autodraw.com',
+  'https://www.aiwizard.ai/spellbook',
+  'https://sketch.metademolab.com/canvas',
+  'https://www.gptgame.app',
+  'https://chat.openai.com/g/g-bHaNPc9EV-cartoonify-me',
+  'https://chat.openai.com/g/g-wkmOq6AxG-emoji-generator',
+  'https://icons8.com/swapper',
+  'https://beta.character.ai',
+  'https://boredhumans.com',
+  'https://melobytes.com/en/apps',
+  'https://waifulabs.com/generate',
+  'https://thishousedoesnotexist.org',
+  'https://interiorai.com',
+  'http://evenstranger.pw',
+  'https://experiments.withgoogle.com/ai/ai-duet/view/',
+  'https://affinelayer.com/pixsrv/',
+  'https://thisxdoesnotexist.com',
+  'https://artsexperiments.withgoogle.com/poemportraits',
+  'https://shadowart.withgoogle.com/?lang=en-us#',
+  'https://deepbeat.org',
+  'https://www.myheritage.nl/deep-nostalgia',
+  'https://freddiemeter.withyoutube.com',
+  'https://cyborg.tenso.rs',
+  'https://research.google.com/semantris/',
+  'https://thispersondoesnotexist.com',
+  'https://replika.com',
+  'https://books.google.com/talktobooks/',
+  'https://fontjoy.com',
+  'https://thing-translator.appspot.com',
+  'https://rytr.me',
+  'https://www.craiyon.com',
+  'https://fakeyou.com',
+  'https://www.wordtune.com',
+  'https://maskr.ai',
+  'https://facefiesta.io',
+  'https://piano-genie.glitch.me',
+  'https://ourbabyai.com',
+  'https://gptriddle.com',
+  'https://epicmusicquiz.com',
+  'https://xenova-doodle-dash.static.hf.space/index.html',
+  'https://www.outfitsai.com',
+  'https://vocalremover.org',
+  'https://replicate.com/lambdal/text-to-pokemon',
+  'https://ai-bingo.lipsumar.io',
+  'https://www.ainamedmypet.com',
+  'https://www.aiisajoke.com',
+  'https://charades.ai',
+  'https://generated.photos/human-generator/',
+  'https://drawnby.ai',
+  'https://www.cat-gpt.com/',
+  'https://caricaturer.io/',
+  'https://humanornot.so',
+  'https://helixngc7293.itch.io/yandere-ai-girlfriend-simulator',
+  'https://sketch.metademolab.com',
+  'https://chirper.ai',
+  'https://www.playarti.com',
+  'https://deepart.io',
+  'https://quickdraw.withgoogle.com/'
+];
+
+    document.getElementById('linkbutton').addEventListener('click', () => {
+        event.preventDefault(); // Prevent default anchor click behavior
+        
+        // Get random URL and remove it from array
+        const randomIndex = Math.floor(Math.random() * urls.length);
+        const randomUrl = urls[randomIndex];
+        urls.splice(randomIndex, 1);
+
+        // Open URL in new tab
+        window.open(randomUrl, '_blank');
+
+        // If all URLs have been visited, reset the array
+        if (urls.length === 0) {
+            urls = [...originalUrls]; // Assuming originalUrls contains initial array
+        }
+    });
+  </script>
+</body>
+</html>
+
+
